@@ -19,6 +19,7 @@ app.use(methodoverride("_method"));
 
 const homeRoutes = require("./src/routes/homeRoutes");
 const galleryRoutes = require('./src/routes/galleryRoutes');
+const contactRoutes = require("./src/routes/contactRoutes");
 
 app.listen(PORT, () =>
   console.log(`Servidor escuchando en puerto ${PORT}`)
@@ -26,3 +27,4 @@ app.listen(PORT, () =>
 
 app.use("/", homeRoutes);
 app.use(galleryRoutes);
+app.use(contactRoutes);
