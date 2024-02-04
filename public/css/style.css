@@ -188,6 +188,8 @@ a{
     color: white;
     font-size: 32px;
     margin: 0 15px;
+    display: flex;
+    
 }
 
 .social-media-navbar i:hover{

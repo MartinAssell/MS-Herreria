@@ -11,10 +11,10 @@
 <%- include('../../partials/header') %>
 <body>
     <div class="info-form">
-        <h2 style="text-align: center;">Queremos escucharte!</h2>
-        <p>Dejanos tu consulta y nos pondremos en contacto con vos
+        <h1 style="text-align: center;">Queremos escucharte!</h1>
+        <h2>Dejanos tu consulta así nos ponemos en contacto con vos...</h2>
         </div>
-    <form method="POST" action="/contacts" enctype="multipart/form-data" class=" formulario">
+        <form method="POST" action="/contacts" class="formulario">
 
         <input type="text" name="name" placeholder="Nombre:" class="campo">
         <input type="text" name="message" placeholder="Tu mensaje" class="campo">
@@ -23,9 +23,7 @@
         <input type="submit" name="send" value="Enviar" class="btn-enviar"><br/>
     </form>
 
-        <p>Gracias por contar con nosotros.
         
-    </p>
 </body>
 <footer>
     <%- include('../../partials/footer') %>
