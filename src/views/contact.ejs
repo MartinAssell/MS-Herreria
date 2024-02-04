@@ -14,13 +14,15 @@
         <h2 style="text-align: center;">Queremos escucharte!</h2>
         <p>Dejanos tu consulta y nos pondremos en contacto con vos
         </div>
-      <form method="POST" action="/contacts" enctype="multipart/form-data" class=" formulario">
+    <form method="POST" action="/contacts" enctype="multipart/form-data" class=" formulario">
 
         <input type="text" name="name" placeholder="Nombre:" class="campo">
         <input type="text" name="message" placeholder="Tu mensaje" class="campo">
-        <input type="email" name="email" placeholder="e-Mail:" class="campo">
-        <input type="file" name="cvHere"placeholder="Adjunta tú CV aqui." style="padding: 15px 10px; color: white;">
+        <input type="number" name="phone" placeholder="Tu número de teléfono / celular" class="campo">
+        <input type="email" name="email" placeholder="E-Mail:" class="campo">
         <input type="submit" name="send" value="Enviar" class="btn-enviar"><br/>
+    </form>
+
         <p>Gracias por contar con nosotros.
         
     </p>
