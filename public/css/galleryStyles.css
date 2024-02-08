@@ -1,0 +1,12 @@
+.photo-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye las imágenes uniformemente en el contenedor */
+    align-items: center; /* Centra las imágenes verticalmente en el contenedor */
+}
+
+.photo-container img {
+    width: 30%; /* Ajusta el ancho de las imágenes según tus necesidades */
+    max-width: 100%; /* Garantiza que las imágenes no superen su tamaño original */
+    border: 2px solid #ddd; /* Añade un borde para resaltar las imágenes (opcional) */
+    border-radius: 8px; /* Añade esquinas redondeadas (opcional) */
+}
