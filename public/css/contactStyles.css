@@ -1,0 +1,9 @@
+
+.campo::placeholder {
+    font-size: 18px; /* Ajusta el tamaño según tus preferencias */
+  }
+  .campo {
+    width: 450px; /* Establece el ancho inicial del campo */
+    max-width: 1500px; /* Establece el ancho máximo del campo */
+    transition: width 0.3s ease; /* Agrega una transición para un cambio suave de tamaño */
+  }

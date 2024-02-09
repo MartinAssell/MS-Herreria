@@ -1,132 +1,13 @@
-* {
-    box-sizing: border-box;
-  }
-  
-.container {
-    background: linear-gradient(220.55deg, #045c32 0%, #00552C 100%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-.icons{
-    width: 20px;
-}
-.infoButton{
-    margin: 1px solid white;
-    color: white;
-    background-color: #00552C;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.space{
-    background-color: white;
-    height: 3px;
-}
-
-.logobrandContainer img{
-    border-radius: 50% 50%;
-    height: 90px;
-    width: 90px;
-}
-
-.principalContainer-fullwidth {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    background-color: #00B960;
-
-  }
-
-.navContainer{
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    background-color: #00B960;
-    
-
-}
-.smallNavigationBar{
-    margin-top: 10px solid white;
-}
-  
-  .smallNavigationBar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  
-  .smallNavigationBar li {
-    margin-right: 10px; /* Ajusta el espacio entre los elementos según tus preferencias */
-  }
-  
-  .smallNavigationBar a {
-    text-decoration: none;
-    color: white; /* Ajusta el color del texto según tus preferencias */
-    padding: 10px;
-    border-radius: 5px; /* Ajusta el radio del borde según tus preferencias */
-    transition: background-color 0.3s;
-  }
-
-  .contenedorCarrousel {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    background-color:antiquewhite
-}
-
-.contenedorCarrousel ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    animation: carrusel 8s linear infinite; /* Controla la velocidad de la animación */
-}
-
-.slide {
-    flex: 0 0 calc(100% - 10px); /* Ancho fijo para cada imagen con un margen de 10px */
-    margin-right: 10px; /* Margen entre las imágenes */
-    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-    height: 100%; /* Ajusta la altura al 100% del contenedor para mantener la proporción original */
-    object-fit: cover; /* Cubre el área completa del contenedor manteniendo la proporción */
-
-}
-
-.slide img {
-    max-width: 100%;
-    height: auto;
-
-}
-@keyframes carrusel {
-  0% { transform: translateX(0%); }
-  33.33% { transform: translateX(-100%); } /* Transición de la primera a la segunda imagen */
-  66.66% { transform: translateX(-200%); } /* Transición de la segunda a la tercera imagen */
-  100% { transform: translateX(0%); } /* Regreso a la primera imagen */
-}
-.mediaContactContainer{
-  background-color: rgb(228, 222, 222)
-}
-.socialMediaIcons img{
-  width: 80px
-}
-.OurMedia {
-  list-style: none;
+*{
+  margin: 0;
   padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content:space-evenly;
-  background-color: rgba(200, 200, 200, 0.2); /* Fondo gris claro casi transparente */
-  padding: 10px; /* Ajusta el espacio interno según sea necesario */
-}
-.socialMediaIcons {
-  margin: 0;
+  box-sizing: border-box;
+  color: var(--black-mate);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+ 
 }
 
-.socialMediaIcons a {
-  display: flex;
-  text-decoration: none;
-  padding: 5px; /* Ajusta el espacio interno del enlace según sea necesario */
-}
 .imgGallery {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); 
   margin: 10px; 
@@ -142,23 +23,4 @@
   justify-content: center;
   align-items: flex-end;
 }
-.photo-container {
-  display: flex;
-  justify-content: space-between; /* Distribuye las imágenes uniformemente en el contenedor */
-  align-items: center; /* Centra las imágenes verticalmente en el contenedor */
-}
 
-.photo-container img {
-  width: 30%; /* Ajusta el ancho de las imágenes según tus necesidades */
-  max-width: 100%; /* Garantiza que las imágenes no superen su tamaño original */
-  border: 2px solid #ddd; /* Añade un borde para resaltar las imágenes (opcional) */
-  border-radius: 8px; /* Añade esquinas redondeadas (opcional) */
-}
-.campo::placeholder {
-  font-size: 18px; /* Ajusta el tamaño según tus preferencias */
-}
-.campo {
-  width: 450px; /* Establece el ancho inicial del campo */
-  max-width: 1500px; /* Establece el ancho máximo del campo */
-  transition: width 0.3s ease; /* Agrega una transición para un cambio suave de tamaño */
-}

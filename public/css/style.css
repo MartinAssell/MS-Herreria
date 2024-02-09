@@ -11,12 +11,13 @@
     color: var(--black-mate);
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    /* Roboto 400 700 900 */
+   
 }
 
 html{
-    font-size: 16px; /*Para usar rem o en*/
+    font-size: 12px; /*Para usar rem o en*/
 }
+/* header */
 
 header {
     position: relative;
@@ -25,11 +26,41 @@ header {
     background-color: black;
 }
 
-nav{
+/*Navbar*/
+
+.navbar{
+    justify-content: space-between;
+    text-align: center; 
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.navbar .item a{
+    margin: 0 15px;
+    padding: 0 10px;
+    color: #F3AD2B;
+    font-weight: 500;
+   
+    
+}
+.navbar .item i{
+color:white;
+}
+.navbar {
+    overflow: hidden;
+    display: flex;
+}
+.navbar a{
+
+font-size: 18px;
+}
+.brand img{
+    width: 110px;
+}
+.brand {
+    float: left; /* Añade esta regla para posicionar el logotipo a la izquierda */
 }
 
 nav ul{
@@ -47,115 +78,17 @@ ul{
 a{
     text-decoration: none;
     color: white;
-}
-
-/*Navbar*/
-
-.brand img{
-    width: 70px;
-    margin-left: 5px;
-    margin-top: 5px;
-}
-.hamburger-icon i{font-size: 25px;
-    color:#F3AD2B;
-}
- .sign i, .shop i, .mobile-brand i{
-    color:#F3AD2B;
-    
-    margin-right: 10px;
-    
-   
-}
-
-.hamburger-icon i:hover, .sign i:hover,
-.shop i:hover, .mobile-brand i:hover, .registration-form h1{
-    color:white;
-    
-}
-
-.navbar{
-    justify-content: space-between;
-    text-align: center;
-}
-
-.nav-menu{
-    display: none;
-}
-
-.navbar .hamburger-icon{
     display: flex;
-    margin-top: 50px;
-    
+    align-content: center;
+    justify-content: space-between;
 
 }
 
-/*Register y Login*/
+
 
 .main{
     display: flex;
     flex-direction: column;
-}
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    width: auto;
-    width: 100%;
-}
-
-.container form{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-
-.container form label, .container form input{
-    margin-bottom: 10px;
-}
-
-/*Form*/
-
-.registration-form{
-    width: 70%;
-}
-
-.registration-form input{
-    border-radius: 5px;
-    border: 1px solid var(--gray-border);
-    height: 36px;
-    width: 100%;
-    background-color: rgb(212, 208, 208);
-}
-
-.registration-form label{
-    font-size: 16px;
-    font-weight: 400;
-    color: #333;
-}
-
-.registration-form h1{
-    font-size: 48px;
-    text-align: center;
-    width: 100%;
-    font-weight: 900;
-}
-
-.registration-form button{
-    height: 42px;
-    width: 100%;
-    background-color: var(--main-colour);
-    text-transform: uppercase;
-    color: black;
-    border: none;
-    margin: 20px 0;
-}
-
-.registration-form button:hover{
-    background-color: white;
-    color: var(--main-colour); 
-    border: solid 1px var(--gray-border);
 }
 
 /*Footer*/
@@ -170,12 +103,12 @@ a{
     font-size: 18px;
     font-weight: 400;  
 }
-
-.text-brand{
-    font-size: 52px;
-    font-weight: 900;
-    text-align: center;
-    color: black;
+.footer-style ul{
+flex-wrap: wrap;
+}
+.footer-menu{
+    display: flex;
+    align-items: center;
 }
 
 .footer-menu ul{
@@ -183,51 +116,27 @@ a{
     color: white;
     margin: 15px 0;
 }
+.footer-profile-img{
+width: 150px;
+}
+.text-brand{
+    font-size: 52px;
+    font-weight: 900;
+    text-align: center;
+    color: black;
+}
+
 
 .social-media-navbar i{
-    color: white;
     font-size: 32px;
     margin: 0 15px;
-    display: flex;
-    
+    display: inline-flex;
 }
 
-.social-media-navbar i:hover{
-    color: var(--black-mate);
-}
 
-/*Detalle del producto*/
 
-.producto {
-    display: flex;
-    width: fit-content;
-    height: fit-content;
-    padding-top: 5%;
-}
 
-.descripcion {
-    max-width: 500px;
-    padding-left: 20px;
-    padding-top: 5%;
-}
 
-main .agregar {
-    padding: 10px;
-    padding-left: 75px;
-    font-weight: 700;
-    font-size: xx-large;
-}
-
-.boton{
-    background-color: #F3AD2B;
-    border-color: #F3AD2B;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 5%;
-}
-
-.extras {
-    padding-left: 4%;
-}
 
 /*Menu*/
 
@@ -243,96 +152,6 @@ main{
     width: 100%;
 }
 
-.product{
-    margin-top: 7%;
-    width: 100%;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.product img{
-    width: 50%;
-    margin-left: 5%;
-    border-radius: 10%;
-    display: block;
-}
-
-.product-name{
-    display: flex;
-    padding-left: 57%;
-    font-size: 100%;
-    font-weight: 900;
-    width: 100%;
-    margin-top: -27%;
-}
-
-.price{
-    display: flex;
-    padding-left: 57%;
-    font-size: 100%;
-    font-weight: 900;
-    width: 100%;
-    margin: 10px 0;
-}
-
-.description{
-    display: flex;
-    margin-top: 17%;
-    margin-bottom: 4%;
-    margin-left: 6%;
-    margin-right: 2%;
-}
-
-.button{
-    display: flex;
-    border-radius: 5px;
-    font-weight: 700;
-    font-size: 16px;
-    background-color: #F3AD2B;
-    border-color: #F3AD2B;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: -2%;
-    margin-left: 58%;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
-.delete-button{
-    display: flex;
-    border-radius: 5px;
-    font-weight: 700;
-    font-size: 16px;
-    background-color: red;
-    border-color: var(--black-mate);
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 30%;
-    margin-top: -20%;
-    margin-left: 58%;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
-/*Cart*/
-
-.cart-container{
-    width: 100%;
-    height: 100vh;
-    margin: 0%;
-    display: flex;
-    flex-wrap: wrap;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-}
-
-.cerrar{
-    margin: 30px;
-    border-radius: 5%; 
-}
 
 .top{
     width: 100%;
@@ -343,93 +162,19 @@ main{
     background-color: orange;
 }
 
-.miPedido{
-    padding-left: 10px;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: white; 
-}
-
-.pedido{
-    width: 100%;
-    margin-top: 0%;
-    display: flex;
-    flex-wrap: nowrap;
-    height: auto;
-    padding: 5px;
-    
-}
-.descyagregar{display: flex;
-   flex-direction: row;
-   justify-content: center;
-    
-}
-
 img{
     width: 35%;
     padding: 5px;
     border-radius: 13%;
 }
-
-.pedido .descripcion{
-    font-size: 16px;
-    font-weight: 400;
-}
-
-p.descripcion{width: 100%;
-max-height: max-content;}
-.menos, .mas{
-    height: 20px;
-    width: 20px;
-    padding: 0%;
-}
 .center{display: flex;
     flex-direction: column;
 justify-content: space-between;}
-
-.sumaresta{
-    width: 20px;
-    height: 20px;
-}
-
-.elPrecio{
-    width: 35%;
-    padding-right: 18px;
-    padding-left: 10px;
-    display: flex;
-    align-items: end;
-    justify-content: right;
-}
-
-.precio{    
-    font-weight: bold; 
-    text-align: right; 
-    
-}
 
 .custom-icon{
     text-align: center;
     font-size: 15px; 
     margin: 0; 
-}
-
-.quitar{
-    width: 20px; 
-    height: 20px; 
-    margin-left: 20px;
-    margin-bottom: 100px;
-    border: none;
-    
-}
-i.fa-solid.fa-trash{color: #F3AD2B;}
-i.fa-solid.fa-trash:hover{color:black}
-.totales{
-    display: flex;
-    flex-direction: column;    
-    width: 100%;
-    padding: 5%;
 }
 
 .sub{
@@ -440,104 +185,35 @@ i.fa-solid.fa-trash:hover{color:black}
     border-top: 1px solid #F3AD2B;
     height: 50px;
 }
-
-.sub.total{
-    width: 100%;    
-    
-}
-
-.tot{
+.social-media-navbar{
     display: flex;
+}
+.social-media-navbar i{
+    font-size: 22px;
+}
+a{
+    font-size: 14px;
+    display: flex;
+    align-content: center;
     justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #F3AD2B;
-    height: 50px;
+
 }
 
-.total{
-    width: 100%;
-    font-weight: bold;
-}
-
-.comentarios{
-    display: flex;
-    flex-direction: column;
-    padding: 5%;
-    width: 100%;
-    padding-bottom: 20px;
-}
-
-.comentarios, .p{
-    font-weight: bold;
-}
-
-#espacio{
-    width: 90%;
-    margin: auto;
-    border-color: rgb(128, 127, 127);
-}
-
-.bottom{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 10px;
-}
-
-.confirmar{
-    width: 100%;
-    height: 30px;
-    font-size: 16px;
-    color: black;
-    font-weight: 700;
-    padding: 5px;
-    margin: auto;
-    background-color:#F3AD2B;
-    border-color:#F3AD2B;
-}
-.confirmar:hover{color:#F3AD2B;
-background-color: white;
-border-color: #cfcfcf;}
-.agregar{color: #F3AD2B;
-}
-.agregar:hover{color: black}
-
-
-
-@media (min-width: 768px) {  
-    header{ height: 200px;}
-
-    .registration-form{
-        width: 520px;
-    }
+@media (max-width: 768px ) {  
 
     .brand img{
-        width: 180px;
-        margin-left: 50px;
-         margin-top: 20px; 
+        width: 100px;
+        margin-left: 5px;
+        margin-top: 5px; 
                
     }
     
     div.brand, li.shop{
         margin-right: 0px;
         
-        
-        
     }
-    
-
-    .hamburger-icon i, .sign i, .shop i, .mobile-brand i,.item{
-        font-size: 25px;
-        
-    }
-.sign i, .shop i{padding-right: 20px;}
-    .navbar .hamburger-icon{
-        display: none;
-    }
-
     .nav-menu{
         display: flex;
-        
     }
 
     .navbar .item a{
@@ -548,37 +224,95 @@ border-color: #cfcfcf;}
        
         
     }
-    ul.desktop-option{padding-right: 60px;}
-    a.hm:hover{color: white;}
-  
-    .item:hover{color: white;}
 
     .navbar{
+        display: flex;
+    }
+
+
+    /*Footer*/
+    .footer-style .footer-menu{
         width: 100%;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+    }
+
+    .footer-style ul{
+        max-width: 200px; 
+        flex-wrap: wrap;
+    }
+
+    .footer-profile-img {
+        width: 100px;
+        height: 100px;
+    }
+    .text-brand{
+        font-size:large;
+
+    }
+    a{
+        font-size: 14px;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
         
+    
+    }
+}
+@media (max-width: 599px) {
+    .nav-menu {
+        display: flex;
+        align-items: center; /* Centra verticalmente los elementos */
+        width: 100%; /* Ajusta el ancho de la barra de navegación según tus necesidades */
+        margin: 0 auto; /* Centra horizontalmente la barra de navegación */
+        flex-wrap: wrap;
+
+    }
+    .navbar{
+        display: flex;
+    }
+    .nav-menu a{
+        padding: 10px; /* Ajusta el relleno para hacer los enlaces más fáciles de hacer clic */
+    text-decoration: none;
+    color: black; /* Color del texto del enlace */
+    }
+    .navbar .item a{
+        font-size: small;
+    }
+    a{
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .navbar{
+        flex-grow: 1; /* El menú ocupará todo el espacio restante */
+    }
+    .brand {
+        flex: 0 0 auto; /* El div de la marca ocupará solo el espacio necesario */
+    }
+    
+    .brand img{
+        width: 90px;
+        margin-left: 5px;
+        margin-top: 5px;
     }
 
-    /*Menu*/
-    .product{
-        max-width: 40%;
-    }
+    .logoMs-container img{
+        width: 80px;
+        margin-left: 40px;
 
-    /*Cart*/
-    .cart-container{
-        width: 30%;
-        height: 100vh;
     }
-
-    /*Register*/
-    .registration-form h1{
-        font-size: 58px;
+    .text-brand{
+        font-size: 25px;
+  
     }
-
-    .registration-form button{
-        margin: 52px 0;
+    .nav-menu .item {
+        margin: 0; /* Elimina el margen de los elementos del menú */
     }
-
-    /*Fotter*/
+    
+    /*Footer*/
     .footer-style .footer-menu{
         width: 100%;
         display: flex;
@@ -593,5 +327,11 @@ border-color: #cfcfcf;}
 
     .footer-style span{
         max-width: 160px;
+    } 
+    .social-media-navbar i {
+        font-size: 18px; /* Tamaño deseado para los iconos */
+        flex-wrap: wrap;
+        display: flex;
     }
-}
+}    
+
