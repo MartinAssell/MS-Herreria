@@ -6,7 +6,7 @@ const contactController = {
     home: (req, res) =>{
         res.render(path.join(__dirname,"../views/contact"))
     },
-    processMessage: (req, res) => {
+    processClientMessage: (req, res) => {
         const { name, message, phone, email } = req.body;
         console.log('Datos del formulario:', { name, message, phone, email });
 

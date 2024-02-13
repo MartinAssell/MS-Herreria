@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <%- include('../../partials/head') %>
+
+</head>
+<%- include('../../partials/header') %>
+<body>
+    <form method="POST" action="/products" enctype="multipart/form-data" class=" formulario">
+
+        <input type="text" name="name" placeholder="Nombre_Producto" class="campo">
+        <input type="text" name="Propiedad 1" placeholder="Propiedad 1" class="campo">
+        <input type="text" name="Propiedad 2" placeholder="Propiedad 2" class="campo">
+        <input type="text" name="Propiedad 3" placeholder="Propiedad 3" class="campo">
+        <input type="text" name="Propiedad 4" placeholder="Propiedad 4" class="campo">
+        <input type="text" name="Propiedad 5" placeholder="Propiedad 4" class="campo">
+        <input type="file" name="imagen"placeholder="Adjunta tú foto aqui." >
+        <input type="submit" name="send" value="Enviar" class="btn-enviar"><br/>   
+    </form>
+</body>
+<footer>
+    <%- include('../../partials/footer') %>
+</footer>
+</html>

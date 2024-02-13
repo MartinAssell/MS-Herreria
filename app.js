@@ -7,10 +7,11 @@ const morgan = require("morgan");
 const dotenv=require("dotenv").config();
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+
 const homeRoutes = require("./src/routes/homeRoutes");
 const galleryRoutes = require('./src/routes/galleryRoutes');
 const contactRoutes = require("./src/routes/contactRoutes");
-
+const adminRoutes= require ('./src/routes/adminRoutes')
 
 app.use(express.static("public"));
 app.use(express.json());
@@ -26,7 +27,7 @@ app.listen(PORT, () =>
 );
 
 
-
 app.use("/", homeRoutes);
 app.use(galleryRoutes);
 app.use(contactRoutes);
+app.use(adminRoutes);
