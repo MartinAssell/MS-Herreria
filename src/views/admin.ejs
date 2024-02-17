@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <%- include('../../partials/head') %>
+
+</head>
+<%- include('../../partials/header') %>
+<body>
+    <h1>Formulario de Creacion de Producto</h1>
+    <form method="POST" action="/products" enctype="multipart/form-data" class=" formulario">
+
+        <input type="text" name="product_name" placeholder="Nombre_Producto" class="campo">
+        <label for="category">Categoría:</label>
+        <select id="category" name="category">
+          <option value="herreria_de_obra">Herrería de Obra</option>
+          <option value="herreria_industrial">Herrería Industrial</option>
+          <option value="herreria_a_pedido">Herrería a Pedido</option>
+          <option value="Herramientas MS">Herrería 4</option>
+          <option value="Mensulas y demás">Herrería 5</option>
+          <option value="herreria_6">Herrería 6</option>
+        </select>        
+        <input type="text" name="description" placeholder="Descripcion" class="campo">
+        <input type="file" name="image" placeholder="Foto del Producto" class="campo">
+        <input type="text" name="price" placeholder="Precio (opcional)" class="campo">
+        <input type="submit" name="send" value="Enviar" class="btn-enviar"><br/>   
+    </form>
+</body>
+<footer>
+    <%- include('../../partials/footer') %>
+</footer>
+</html>

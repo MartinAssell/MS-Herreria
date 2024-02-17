@@ -3,36 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/galleryStyles.css">
-    <title>Home Page</title>
-        <%- include('../../partials/head') %>
 
+    <link rel="stylesheet" href="/css/galleryStyles.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Home Page</title>
+    <% include('../../partials/head') %>
 </head>
 <%- include('../../partials/header') %>
-<style>
-   
-</style>
-</head>
 <body>
-<div class="photo-container">
-    <img src="../../images/chiqui/produccion.jpg" alt="Imagen 1">
-    <img src="../../images/chiqui/produccion2.jpg" alt="Imagen 1">
-    <img src="../../images/chiqui/produccion1.jpg" alt="Imagen 1">
-</div>
-<div class="photo-container">
-    <img src="../../images/chiqui/PORCI.jpg" alt="Imagen 1">
-    <img src="../../images/chiqui/PORCI2.jpg" alt="Imagen 1">
-    <img src="../../images/chiqui/PORCI1.jpg" alt="Imagen 1">
-</div>
-<div class="photo-container">
-    <img src="../../images/chiqui/REnfield0.jpg" alt="Imagen 1">
-    <img src="../../images/chiqui/REnfield2.jpg" alt="Imagen 1">
-    <img src="../../images/chiqui/REnfield1.jpg" alt="Imagen 1">
-</div>
+    <% Object.keys(productos).forEach(key => { %>
+        <% const producto = productos[key]; %>
+        <div class="producto">
+            <h2><%= producto.product_name %></h2>
+            <p><%= producto.description %></p>
+            <img src="<%= producto.image %>" alt="<%= producto.product_name %>">
+            <p>Precio: <%= producto.price %></p>
+            <p>Categoría: <%= producto.category %></p>
+        </div>
+    <% }) %>
+    >
 </body>
-
 <footer>
     <%- include('../../partials/footer') %>
-
 </footer>
 </html>
