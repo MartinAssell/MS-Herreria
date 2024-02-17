@@ -29,12 +29,14 @@ const productValidations = [
   // Nombre
   body('name')
     .notEmpty().withMessage('Escribe el nombre del producto')
-    .isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres'),
+    .isLength({ min: 2 }).withMessage('El nombre debe tener al menos 2 caracteres'),
 
   // Descripción
   body('description')
     .isLength({ min: 5 }).withMessage('La descripción debe tener al menos 5 caracteres'),
 
+  body('category'),
+  
   // Imagen
   body('image')
     .custom((value, { req }) => {

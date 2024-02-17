@@ -1,6 +1,7 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const galleryControllers = require("../controllers/galleryControllers");
-router.get("/gallery", galleryControllers.home)
+const galleryController = require('../controllers/galleryControllers');
+
+router.get('/gallery', galleryController.home);
 
 module.exports = router;

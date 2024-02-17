@@ -28,6 +28,6 @@ app.listen(PORT, () =>
 
 
 app.use("/", homeRoutes);
-app.use(galleryRoutes);
+app.use( galleryRoutes); // Agrega el prefijo "/gallery" para las rutas de galería
 app.use(contactRoutes);
 app.use(adminRoutes);

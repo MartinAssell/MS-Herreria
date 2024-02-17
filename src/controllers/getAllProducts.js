@@ -21,7 +21,8 @@ const getAllProducts = {
             product_name: req.body.product_name,
             description: req.body.description,
             image: req.file.filename,
-            price: req.body.price
+            price: req.body.price,
+            category:req.body.category
         })
         .then(function(result) { 
             return db.Productos.findAll();
