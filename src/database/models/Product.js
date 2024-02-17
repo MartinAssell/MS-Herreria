@@ -17,7 +17,11 @@ module.exports = (sequelize, dataTypes) => {
         },
         price: {
             type: dataTypes.FLOAT
-        }, 
+        },
+        category: {
+            type: dataTypes.STRING
+        } 
+
     };
     let config = {
         tableName: "MS-productos",

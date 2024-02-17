@@ -9,15 +9,22 @@
 </head>
 <%- include('../../partials/header') %>
 <body>
+    <h1>Formulario de Creacion de Producto</h1>
     <form method="POST" action="/products" enctype="multipart/form-data" class=" formulario">
 
         <input type="text" name="name" placeholder="Nombre_Producto" class="campo">
-        <input type="text" name="Propiedad 1" placeholder="Propiedad 1" class="campo">
-        <input type="text" name="Propiedad 2" placeholder="Propiedad 2" class="campo">
-        <input type="text" name="Propiedad 3" placeholder="Propiedad 3" class="campo">
-        <input type="text" name="Propiedad 4" placeholder="Propiedad 4" class="campo">
-        <input type="text" name="Propiedad 5" placeholder="Propiedad 4" class="campo">
-        <input type="file" name="imagen"placeholder="Adjunta tú foto aqui." >
+        <label for="category">Categoría:</label>
+        <select id="category" name="category">
+          <option value="herreria_de_obra">Herrería de Obra</option>
+          <option value="herreria_industrial">Herrería Industrial</option>
+          <option value="herreria_a_pedido">Herrería a Pedido</option>
+          <option value="Herramientas MS">Herrería 4</option>
+          <option value="Mensulas y demás">Herrería 5</option>
+          <option value="herreria_6">Herrería 6</option>
+        </select>        
+        <input type="text" name="description" placeholder="Descripcion" class="campo">
+        <input type="file" name="image" placeholder="Foto del Producto" class="campo">
+        <input type="text" name="price" placeholder="Precio (opcional)" class="campo">
         <input type="submit" name="send" value="Enviar" class="btn-enviar"><br/>   
     </form>
 </body>
