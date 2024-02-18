@@ -10,3 +10,10 @@
     border: 2px solid #ddd; /* Añade un borde para resaltar las imágenes (opcional) */
     border-radius: 8px; /* Añade esquinas redondeadas (opcional) */
 }
+
+
+.imgGallery {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); 
+    margin: 10px; 
+    width: 20%; /* Ajusta el ancho al 100% del contenedor */
+  }
