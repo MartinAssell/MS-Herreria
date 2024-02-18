@@ -3,27 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="/css/galleryStyles.css">
     <link rel="stylesheet" href="/css/style.css">
     <title>Home Page</title>
     <% include('../../partials/head') %>
 </head>
-<%- include('../../partials/header') %>
 <body>
-    <% Object.keys(productos).forEach(key => { %>
-        <% const producto = productos[key]; %>
-        <div class="producto">
-            <h2><%= producto.product_name %></h2>
-            <p><%= producto.description %></p>
-            <img class="imgGallery" src= "/images/productImages/<%= producto.image %>" alt="<%= producto.product_name %>">
-            <p>Precio: <%= producto.price %></p>
-            <p>Categoría: <%= producto.category %></p>
-        </div>
-    <% }) %>
-    >
+    <%- include('../../partials/header') %>
+    <h1>Galeria de Compras</h1>
+    <div class="productos-container">
+        <% let contador = 0; %>
+        <% Object.keys(productos).forEach(key => { %>
+            <% const producto = productos[key]; %>
+            <% if (contador % 3 === 0) { %>
+                <div class="fila">
+            <% } %>
+            <div class="producto">
+                <h2 class="productName"><%= producto.product_name %></h2>
+                <div class="imagen-y-comprar">
+                    <img class="imgFromGallery" src="/images/productImages/<%= producto.image %>" alt="<%= producto.product_name %>">
+                    <a href="/" class="enlace-comprar"><span>Comprar</span></a>
+                </div>
+                <p class="productDescription"><%= producto.description %></p>
+                <p class="productPrice">Precio: <%= producto.price %></p>
+                <p class="productCategory">Categoría: <%= producto.category %></p>
+            </div>
+            <% contador++; %>
+            <% if (contador % 3 === 0 || contador === Object.keys(productos).length) { %>
+                </div> <!-- Cierre de fila -->
+            <% } %>
+        <% }) %>
+    </div> <!-- Cierre de productos-container -->
+    <footer>
+        <%- include('../../partials/footer') %>
+    </footer>
 </body>
-<footer>
-    <%- include('../../partials/footer') %>
-</footer>
+<script src="../js/script.js" defer></script>
 </html>
