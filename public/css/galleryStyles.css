@@ -1,12 +1,50 @@
-.photo-container {
+ 
+ .productos-container {
     display: flex;
-    justify-content: space-between; /* Distribuye las imágenes uniformemente en el contenedor */
-    align-items: center; /* Centra las imágenes verticalmente en el contenedor */
+    flex-wrap: wrap;
 }
 
-.photo-container img {
-    width: 30%; /* Ajusta el ancho de las imágenes según tus necesidades */
-    max-width: 100%; /* Garantiza que las imágenes no superen su tamaño original */
-    border: 2px solid #ddd; /* Añade un borde para resaltar las imágenes (opcional) */
-    border-radius: 8px; /* Añade esquinas redondeadas (opcional) */
+.fila {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+}
+body{
+    background-color: rgb(235, 235, 230);
+}
+
+.producto {
+    width:fit-content; /* 33.33% para tres productos por línea, restamos el espacio entre ellos */
+    margin-right: 10px; /* Reducimos el margen derecho para acercar las imágenes */
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10%;
+}
+.imagen-y-comprar {
+    display: flex;
+    align-items: center; /* Alinear elementos verticalmente */
+    justify-content: space-between;
+    align-items: flex-end
+}
+.productName{
+    color: #e7a01c;
+}
+.imgFromGallery {
+    flex: 0 0 auto; /* La imagen no se expandirá para ocupar todo el espacio disponible */
+    margin-right: 10px; /* Espacio entre la imagen y el botón */
+}
+.enlace-comprar {
+    flex: 0 0 auto; /* El botón no se expandirá para ocupar todo el espacio disponible */
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 2px solid black;
+}
+
+/* Cambiar color del texto al pasar el cursor */
+.enlace-comprar:hover {
+    color: black; /* Cambiar texto a negro al pasar el cursor */
 }
