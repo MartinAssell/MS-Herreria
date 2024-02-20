@@ -79,8 +79,4 @@ router.delete('/product/delete/:id', deleteProduct);
 
 router.put("/product/edit/:id",confirmModifyProduct);
 
-module.exports = {
-  productValidations,
-  handleValidationErrors
-};
 module.exports = router;

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <%- include('../../partials/head') %>
+
+</head>
+<%- include('../../partials/header') %>
+<body>
+    <h1>Editar un Producto</h1>
+
+    <form action="/editProduct/<%= productos.id %>" method="post">
+        <p>Selecciona un producto para editar de la lista de abajo:</p>
+        <select name="productId">
+            <% productos.forEach(function(producto) { %>
+                <option value="<%= producto.id %>"><%= producto.product_name %></option>
+            <% }); %>
+        </select>
+        <br><br>
+        <label for="product_name">Nombre:</label>
+        <input type="text" id="product_name" name="product_name" value="<%= productos[0].product_name %>"><br>
+        <label for="description">Descripción:</label>
+        <textarea id="description" name="description"><%= productos[0].description %></textarea><br>
+        <label for="price">Precio:</label>
+        <input type="number" id="price" name="price" value="<%= productos[0].price %>"><br>
+        <input type="submit" value="Guardar Cambios">
+    </form>
+</body>
+<footer>
+    <%- include('../../partials/footer') %>
+</footer>
+</html> 
+

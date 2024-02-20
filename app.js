@@ -12,7 +12,7 @@ const homeRoutes = require("./src/routes/homeRoutes");
 const galleryRoutes = require('./src/routes/galleryRoutes');
 const contactRoutes = require("./src/routes/contactRoutes");
 const adminRoutes= require ('./src/routes/adminRoutes')
-
+const editProductRoutes= require ('./src/routes/editProductRoutes')
 app.use(express.static("public"));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -28,6 +28,7 @@ app.listen(PORT, () =>
 
 
 app.use("/", homeRoutes);
-app.use( galleryRoutes); // Agrega el prefijo "/gallery" para las rutas de galería
+app.use( galleryRoutes);
 app.use(contactRoutes);
 app.use(adminRoutes);
+app.use(editProductRoutes)
