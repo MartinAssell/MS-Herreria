@@ -13,24 +13,25 @@
     <h1>Galeria de Compras</h1>
     <div class="productos-container">
         <% let contador = 0; %>
-        <% Object.keys(productos).forEach(key => { %>
-            <% const producto = productos[key]; %>
-            <% if (contador % 3 === 0) { %>
-                <div class="fila">
-            <% } %>
-            <div class="producto">
-                <h2 class="productName"><%= producto.product_name %></h2>
-                <div class="imagen-y-comprar">
-                    <img class="imgFromGallery" src="/images/productImages/<%= producto.image %>" alt="<%= producto.product_name %>">
-                    <a href="/" class="enlace-comprar"><span>Comprar</span></a>
+        <% productos.forEach(producto => { %>
+            <% if (producto !== null) { %>
+                <% if (contador % 3 === 0) { %>
+                    <div class="fila">
+                <% } %>
+                <div class="producto">
+                    <h2 class="productName"><%= producto.product_name %></h2>
+                    <div class="imagen-y-comprar">
+                        <img class="imgFromGallery" src="/images/productImages/<%= producto.image %>" alt="<%= producto.product_name %>">
+                        <a href="/" class="enlace-comprar"><span>Comprar</span></a>
+                    </div>
+                    <p class="productDescription"><%= producto.description %></p>
+                    <p class="productPrice">Precio: <%= producto.price %></p>
+                    <p class="productCategory">Categoría: <%= producto.category %></p>
                 </div>
-                <p class="productDescription"><%= producto.description %></p>
-                <p class="productPrice">Precio: <%= producto.price %></p>
-                <p class="productCategory">Categoría: <%= producto.category %></p>
-            </div>
-            <% contador++; %>
-            <% if (contador % 3 === 0 || contador === Object.keys(productos).length) { %>
-                </div> <!-- Cierre de fila -->
+                <% contador++; %>
+                <% if (contador % 3 === 0 || contador === productos.length) { %>
+                    </div> <!-- Cierre de fila -->
+                <% } %>
             <% } %>
         <% }) %>
     </div> <!-- Cierre de productos-container -->
@@ -38,5 +39,4 @@
         <%- include('../../partials/footer') %>
     </footer>
 </body>
-<script src="../js/script.js" defer></script>
 </html>
