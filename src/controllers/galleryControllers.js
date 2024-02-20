@@ -6,6 +6,7 @@ const galleryController = {
     home: function(req, res) {
         db.Productos.findAll()
             .then(function(productos){
+
                 const ruta = path.join(__dirname, '../views/gallery');
                 res.render(ruta, { productos: productos });
             })

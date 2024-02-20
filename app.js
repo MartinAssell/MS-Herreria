@@ -13,6 +13,8 @@ const galleryRoutes = require('./src/routes/galleryRoutes');
 const contactRoutes = require("./src/routes/contactRoutes");
 const adminRoutes= require ('./src/routes/adminRoutes')
 const editProductRoutes= require ('./src/routes/editProductRoutes')
+const deleteProductRoutes=require('./src/routes/deleteProductRoutes')
+
 app.use(express.static("public"));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -32,3 +34,4 @@ app.use( galleryRoutes);
 app.use(contactRoutes);
 app.use(adminRoutes);
 app.use(editProductRoutes)
+app.use(deleteProductRoutes)
