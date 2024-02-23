@@ -22,8 +22,13 @@
                     <h2 class="productName"><%= producto.product_name %></h2>
                     <div class="imagen-y-comprar">
                         <img class="imgFromGallery" src="/images/productImages/<%= producto.image %>" alt="<%= producto.product_name %>">
-                        <a href="/" class="enlace-comprar"><span>Comprar</span></a>
-                    </div>
+                        <a href="./payments" class="enlace-comprar">
+                            <span>Comprar</span>
+                            <svg width="20" height="20">
+                                <image href="../../images/svg/mercado-pago-480.png" width="20" height="20" />
+                            </svg>
+                            
+                        </a>                    </div>
                     <p class="productDescription"><%= producto.description %></p>
                     <p class="productPrice">Precio: <%= producto.price %></p>
                     <p class="productCategory">Categoría: <%= producto.category %></p>

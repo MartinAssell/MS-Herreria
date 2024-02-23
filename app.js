@@ -14,6 +14,7 @@ const contactRoutes = require("./src/routes/contactRoutes");
 const adminRoutes= require ('./src/routes/adminRoutes')
 const editProductRoutes= require ('./src/routes/editProductRoutes')
 const deleteProductRoutes=require('./src/routes/deleteProductRoutes')
+const paymentRoutes = require('./src/routes/paymentRoutes');
 
 app.use(express.static("public"));
 app.use(express.json());
@@ -21,7 +22,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(morgan('dev'));
 app.set('view engine', 'ejs');
+app.engine("html", require("hbs").__express);
 app.set('views', path.join(__dirname, 'views'));
+app.use(express.json());
 
 app.use(methodoverride("_method"));
 app.listen(PORT, () =>
@@ -35,3 +38,4 @@ app.use(contactRoutes);
 app.use(adminRoutes);
 app.use(editProductRoutes)
 app.use(deleteProductRoutes)
+app.use (paymentRoutes)
