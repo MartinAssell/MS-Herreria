@@ -1,10 +1,21 @@
 const path = require("path");
 const express = require("express");
 const mercadopago = require("mercadopago");
+const db = require("../database/models");
 
 const paymentControllers = {
-    payments: (req, res) => {
-        res.render(path.join(__dirname, "../views/payments"), { req: req });
+    payments: function (req, res) { // Corrected syntax: 'payments:' instead of 'payments function'
+        db.Productos.findAll()
+        .then(function(productos){
+            const ruta= path.join(__dirname, "../views/payments");
+
+            res.render(ruta, { productos: productos, req: req });
+        })
+        .catch(function(err) {
+            // Handling any errors that might occur during the database query
+            console.error('Error occurred while fetching productos:', err);
+            res.status(500).send('Internal Server Error'); // Sending a generic error response
+        });
     }
 };
 

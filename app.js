@@ -16,7 +16,13 @@ const editProductRoutes= require ('./src/routes/editProductRoutes')
 const deleteProductRoutes=require('./src/routes/deleteProductRoutes')
 const paymentRoutes = require('./src/routes/paymentRoutes');
 
-app.use(express.static("public"));
+app.use(express.static("public", { // Configurar para servir archivos estáticos
+  setHeaders: (res, path, stat) => {
+    if (path.endsWith('.js')) { // Si el archivo termina en .js
+      res.set('Content-Type', 'application/javascript'); // Establecer tipo MIME a application/javascript
+    }
+  }
+}));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

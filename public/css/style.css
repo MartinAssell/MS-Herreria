@@ -164,12 +164,12 @@ main{
 
 img{
     width: 35%;
-    padding: 5px;
     border-radius: 13%;
 }
-.center{display: flex;
+.center{
+    display: flex;
     flex-direction: column;
-justify-content: space-between;}
+    justify-content: space-between;}
 
 .custom-icon{
     text-align: center;
