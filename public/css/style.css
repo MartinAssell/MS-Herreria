@@ -3,6 +3,10 @@
     --black-mate: #333;
     --gray-border: #d2d2d7;
 }
+.nav-menu .item.active a {
+    background-color: #db902e; 
+    color: #ffffff;
+}
 
 *{
     margin: 0;
@@ -15,7 +19,7 @@
 }
 
 html{
-    font-size: 12px; /*Para usar rem o en*/
+    font-size: 12px;
 }
 /* header */
 
@@ -60,7 +64,7 @@ font-size: 18px;
     width: 110px;
 }
 .brand {
-    float: left; /* Añade esta regla para posicionar el logotipo a la izquierda */
+    float: left; 
 }
 
 nav ul{
@@ -263,9 +267,9 @@ a{
 @media (max-width: 599px) {
     .nav-menu {
         display: flex;
-        align-items: center; /* Centra verticalmente los elementos */
-        width: 100%; /* Ajusta el ancho de la barra de navegación según tus necesidades */
-        margin: 0 auto; /* Centra horizontalmente la barra de navegación */
+        align-items: center; 
+        width: 100%; 
+        margin: 0 auto; 
         flex-wrap: wrap;
 
     }
@@ -273,9 +277,9 @@ a{
         display: flex;
     }
     .nav-menu a{
-        padding: 10px; /* Ajusta el relleno para hacer los enlaces más fáciles de hacer clic */
+        padding: 10px;
     text-decoration: none;
-    color: black; /* Color del texto del enlace */
+    color: black; 
     }
     .navbar .item a{
         font-size: small;
@@ -287,10 +291,10 @@ a{
     
     }
     .navbar{
-        flex-grow: 1; /* El menú ocupará todo el espacio restante */
+        flex-grow: 1; 
     }
     .brand {
-        flex: 0 0 auto; /* El div de la marca ocupará solo el espacio necesario */
+        flex: 0 0 auto;
     }
     
     .brand img{
@@ -309,7 +313,7 @@ a{
   
     }
     .nav-menu .item {
-        margin: 0; /* Elimina el margen de los elementos del menú */
+        margin: 0; 
     }
     
     /*Footer*/
@@ -329,7 +333,7 @@ a{
         max-width: 160px;
     } 
     .social-media-navbar i {
-        font-size: 18px; /* Tamaño deseado para los iconos */
+        font-size: 18px; 
         flex-wrap: wrap;
         display: flex;
     }

@@ -22,7 +22,7 @@
                     <h2 class="productName"><%= producto.product_name %></h2>
                     <div class="contenedor-imagen-y-comprar">
                         <img class="imgFromGallery" src="/images/productImages/<%= producto.image %>" alt="<%= producto.product_name %>">
-                        <a href="/" class="enlace-comprar"><span>Comprar</span></a>
+                        <a href="/payments?image=<%= producto.image %>&productName=<%= producto.product_name %>&description=<%= producto.description %>&price=<%= producto.price %>" class="enlace-comprar"><span>Comprar</span></a>
                     </div>
                     <p class="productDescription"><%= producto.description %></p>
                     <p class="productPrice">Precio: <%= producto.price %></p>

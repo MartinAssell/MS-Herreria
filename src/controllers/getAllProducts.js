@@ -1,8 +1,6 @@
 const db = require("../database/models");
 const Op = db.Sequelize.Op
 const path = require('path');
-const adminCheck = require("../middlewares/admincheck");
-const adminController = require("../controllers/adminControllers");
 
 const getAllProducts = {
     list: function(req, res) {
@@ -17,12 +15,13 @@ const getAllProducts = {
         });
     },
     create: function(req, res) {
+        const images = req.files.map(file => file.filename); // Obtener nombres de archivo de las imágenes cargadas
         db.Productos.create({
             product_name: req.body.product_name,
             description: req.body.description,
-            image: req.file.filename,
+            images: req.body.images,
             price: req.body.price,
-            category:req.body.category
+            category: req.body.category
         })
         .then(function(result) { 
             return db.Productos.findAll();
@@ -34,7 +33,8 @@ const getAllProducts = {
             console.error("Error al crear el producto:", error);
             res.status(500).send("Error interno del servidor");
         });
-    },
+    }
+    
 };
  
 

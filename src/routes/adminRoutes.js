@@ -6,14 +6,13 @@ const adminControllers = require("../controllers/adminControllers");
 const getAllProducts = require("../controllers/getAllProducts");
 
 const storage = multer.diskStorage({
-    destination:(req, file, cb) => {
-        cb (null, path.join(__dirname, "../../public/images/productimages"))
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, "../../public/uploads"))
     },
-    filename:(req, file, cb) => {
-        cb (null,`${Date.now()}_bar${path.extname(file.originalname)}`)
+    filename: (req, file, cb) => {
+        cb(null, `${Date.now()}_photo${path.extname(file.originalname)}`)
     },
 })
-
 const uploadBar = multer({storage})
 
 

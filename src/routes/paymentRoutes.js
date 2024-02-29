@@ -4,10 +4,8 @@ const router = express.Router();
 const paymentControllers = require('../controllers/paymentControllers');
 const mercadoPagoPublicKey = process.env.MERCADO_PAGO_SAMPLE_PUBLIC_KEY;
 
-router.get("/payments", function (req, res) {
-    res.status(200).render(path.join(__dirname, "../views/payments"), { mercadoPagoPublicKey });
-  }); 
-  
+router.get("/payments", paymentControllers.payments);
+
 router.post("/paymentControllers", (req, res) => {
     const { body } = req;
     const { payer } = body; 

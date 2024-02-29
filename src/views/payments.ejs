@@ -29,15 +29,14 @@
                                             <div class="product-details">
                                                 <div class="row justify-content-md-center">
                                                     <div class="col-md-3">
-                                                        <img class="img-fluid mx-auto d-block image" src="images/product.png">
+                                                        <img class="img-fluid mx-auto d-block image" src="<%= '/images/productImages/' + imageUrl %>" alt="Imagen Seleccionada">
                                                     </div>
                                                     <div class="col-md-4 product-detail">
-                                                        <h5>Producto a comprar</h5>
+                                                        <h5>Producto a comprar: <%= newProductName %></h5>
                                                         <div class="product-info"> 
-                                                            <p><b>Description: </b><span id="product-description">Some book</span><br>
-                                                                <b>Author: </b>Dale Carnegie<br>
-                                                                <b>Number of pages: </b>336<br>
-                                                                <b>Price:</b> $ <span id="unit-price">10</span></p>
+                                                            <p><b>Description: </b><span id="product-description"><%= newDescription %></span><br>
+                                                                <b>Price: </b> $ <span id="unit-price"><%= newPrice %></span>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3 product-detail">
